@@ -13,7 +13,7 @@ Make sure you have the following installed on your machine:
 
 ************************************************************ Project Setup ************************************************************
 
-1): Change the database server name and its username & password.
+1): Change the database server name and its username & password (Auto migration will be applied).
 
 2): If you want to run this project on https then commnet out this line ["applicationUrl": "http://localhost:5124"] and uncomment this line ["applicationUrl": "https://localhost:7040;http://localhost:5124",]
     In launchSettings.json along with this uncomment this [app.UseHttpsRedirection()] from program.cs.
