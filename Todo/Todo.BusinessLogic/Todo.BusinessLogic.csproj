@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <BaseProjectName>$([System.String]::Copy('$(MSBuildProjectName)').Split('.')[0])</BaseProjectName>
+    <AssemblyName>$(MSBuildProjectName)</AssemblyName>
+     <RootNamespace>$(MSBuildProjectName)</RootNamespace>
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.3.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="9.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.0" />
+    <PackageReference Include="Polly" Version="8.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\$(BaseProjectName).DataAccess\$(BaseProjectName).DataAccess.csproj" />
+    <ProjectReference Include="..\$(BaseProjectName).Entities\$(BaseProjectName).Entities.csproj" />
+
+  </ItemGroup>
+
+</Project>

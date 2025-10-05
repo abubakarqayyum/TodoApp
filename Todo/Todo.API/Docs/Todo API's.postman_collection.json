@@ -1,0 +1,297 @@
+{
+	"info": {
+		"_postman_id": "6fc011bb-4cec-4df6-8b33-007d694c5c02",
+		"name": "Todo API's",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11300755"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "UserRegistration",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"FullName\" :\"Travis Head\",\r\n    \"Email\" : \"TravisHead@gmail.com\",\r\n    \"Password\" : \"Abcd@12345\",\r\n    \"PhoneNumber\" : \"+923344134556\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/Auth/Register",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"Auth",
+								"Register"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UserLogin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJhYnViYWthcnFheXl1bUBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiQWJ1YmFrYXIgUWF5eXVtIiwiZXhwIjoxNzU5NjcwMDU5LCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo1MTI0IiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NTEyNCJ9.wQ5fetboRo76gAZIeKR9PljKGSVTPIS-iy0misA6Hos",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"Email\":\"TravisHead@gmail.com\",\r\n   \"Password\": \"Abcd@12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/Auth/Login",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"Auth",
+								"Login"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Todo",
+			"item": [
+				{
+					"name": "Add",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJhYnViYWthcnFheXl1bUBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiQWJ1YmFrYXIgUWF5eXVtIiwiZXhwIjoxNzU5Njc4MjMzLCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo1MTI0IiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NTEyNCJ9.ZGjwft0NBFCCbExxlyIfjjaqbC1SqrInVVbBFFOgZk0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Title\": \"Todo 6\",\r\n    \"Description\": \"Description for todo 6\",\r\n    \"Status\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/Todos/",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"Todos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjIiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJUcmF2aXNIZWFkQGdtYWlsLmNvbSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJUcmF2aXMgSGVhZCIsImV4cCI6MTc1OTY3NzQxNCwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NTEyNCIsImF1ZCI6Imh0dHBzOi8vbG9jYWxob3N0OjUxMjQifQ.H_um_4Rmr785uA-UVFmsPjXOVAvnC5x98NDdp0oUJ9U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Title\": \"Tode4\",\r\n    \"Description\": \"Updated Description for todo 4\",\r\n    \"Status\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/Todos/?id=2",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"Todos",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAll",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjIiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJUcmF2aXNIZWFkQGdtYWlsLmNvbSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJUcmF2aXMgSGVhZCIsImV4cCI6MTc1OTY3ODM2MywiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NTEyNCIsImF1ZCI6Imh0dHBzOi8vbG9jYWxob3N0OjUxMjQifQ.kxjlTAw4FJCke4o-izw57DqiIVTeAqEAyxX3B8px61o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pageNo\":1,\r\n    \"pageSize\":10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/Todos/GetAll",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"Todos",
+								"GetAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjIiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJUcmF2aXNIZWFkQGdtYWlsLmNvbSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJUcmF2aXMgSGVhZCIsImV4cCI6MTc1OTY3NzQxNCwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NTEyNCIsImF1ZCI6Imh0dHBzOi8vbG9jYWxob3N0OjUxMjQifQ.H_um_4Rmr785uA-UVFmsPjXOVAvnC5x98NDdp0oUJ9U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/Todos/?id=1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"Todos",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjIiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJUcmF2aXNIZWFkQGdtYWlsLmNvbSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJUcmF2aXMgSGVhZCIsImV4cCI6MTc1OTY3NzQxNCwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NTEyNCIsImF1ZCI6Imh0dHBzOi8vbG9jYWxob3N0OjUxMjQifQ.H_um_4Rmr785uA-UVFmsPjXOVAvnC5x98NDdp0oUJ9U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/Todos/?id=1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"Todos",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
