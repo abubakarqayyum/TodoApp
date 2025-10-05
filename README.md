@@ -20,7 +20,7 @@ Make sure you have the following installed on your machine:
 
 3): API collection is available in the docs folder in API project.
 
-4): Run this project. (Use postman collection to perform operations)
+4): Run this project. (Use postman collection to perform operations. BaseUrl postman for http [http://localhost:5124] and for https [https://localhost:7040])
 
 
 
